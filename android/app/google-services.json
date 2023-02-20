@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "138908582840",
+    "project_id": "ebay-auction-b1f00",
+    "storage_bucket": "ebay-auction-b1f00.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:138908582840:android:7d2bb1336adc5c710d054d",
+        "android_client_info": {
+          "package_name": "com.example.ebay_auction"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "138908582840-accmgm9k4gvag30rvhi7cjpo9nce1f47.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ebay_auction",
+            "certificate_hash": "64290455a075bea28f580dd7c79b2065fb2662ed"
+          }
+        },
+        {
+          "client_id": "138908582840-0qec41olkkhitvmfrn4k4psvgq23kph0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDAX1v6YgE-EDmd42PtEREQsziQ6mRi-u0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "138908582840-0qec41olkkhitvmfrn4k4psvgq23kph0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
