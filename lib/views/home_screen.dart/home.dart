@@ -42,7 +42,7 @@ class Home extends StatelessWidget {
 
     var navbody = [
       const ItemGallery(),
-      const MyItemsScreen(),
+      const MyItemScreen(),
       const ProfileScreen()
     ];
 

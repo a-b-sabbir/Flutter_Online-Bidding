@@ -1,3 +1,5 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
 import 'package:google_sign_in/google_sign_in.dart';
@@ -9,6 +11,7 @@ class AuthController extends GetxController {
   // Text Controller
   var emailController = TextEditingController();
   var passwordController = TextEditingController();
+  final FirebaseFirestore _db = FirebaseFirestore.instance;
 
   // Determine if the user is authenticated
   signInWithGoogle() async {
@@ -26,8 +29,21 @@ class AuthController extends GetxController {
       idToken: googleAuth.idToken,
     );
 
-    // Once signed in, return the UserCredential
+    // Saving the user data
+    try {
+      final userDocRef = _db.collection('users').doc(googleUser.id);
 
+      await userDocRef.set({
+        'id': googleUser.id,
+        'email': googleUser.email,
+        'name': googleUser.displayName,
+        'imageUrl': googleUser.photoUrl
+      });
+    } catch (error) {
+      print('Error signing in with Google: $error');
+    }
+
+    // Once signed in, return the UserCredential
     return await FirebaseAuth.instance.signInWithCredential(credential);
   }
 

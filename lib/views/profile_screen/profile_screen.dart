@@ -15,7 +15,7 @@ class ProfileScreen extends StatelessWidget {
     var controller = Get.put(AuthController());
     return bgWidget(
         bgWidget_child: Container(
-      padding: const EdgeInsets.symmetric(horizontal: 14.0, vertical: 90.0),
+      padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 90.0),
       child: Column(
         children: [
           Row(
@@ -32,11 +32,12 @@ class ProfileScreen extends StatelessWidget {
                   boldText(
                       text: FirebaseAuth.instance.currentUser!.displayName!,
                       color: whiteColor,
-                      size: 25.0),
+                      size: 20.0),
+                  5.heightBox,
                   normalText(
                       text: FirebaseAuth.instance.currentUser!.email!,
                       color: whiteColor,
-                      size: 20.0)
+                      size: 17.0)
                 ],
               )
             ],
@@ -57,61 +58,3 @@ class ProfileScreen extends StatelessWidget {
     ));
   }
 }
-
-//     return Container(
-//       padding: EdgeInsets.symmetric(horizontal: 12),
-//       child: Column(
-//     children: [
-//       //user profile details
-//       Row(
-//         children: [
-//           data['imageUrl'] == ''
-//               ? Image.asset(
-//                   imgProfile,
-//                   width: 70,
-//                   fit: BoxFit.cover,
-//                 ).box.roundedLg.clip(Clip.antiAlias).make()
-//               : Image.network(
-//                   data['imageUrl'],
-//                   width: 70,
-//                   fit: BoxFit.cover,
-//                 ).box.roundedLg.clip(Clip.antiAlias).make(),
-//           20.widthBox,
-//           Column(
-//             crossAxisAlignment: CrossAxisAlignment.start,
-//             children: [
-//               "${data['name']}"
-//                   .text
-//                   .size(18)
-//                   .white
-//                   .semiBold
-//                   .make(),
-//               5.heightBox,
-//               '${data['email']}'.text.size(15).white.make(),
-//             ],
-//           ),
-//           Spacer(),
-//           OutlinedButton(
-//               style: OutlinedButton.styleFrom(
-//                   backgroundColor: purple2,
-//                   side: BorderSide(
-//                       color: redColor, width: 2)),
-//               onPressed: () async {
-//                 await Get.put(
-//                     AuthService().signOut(context));
-//                 Get.offAll(() => LoginScreen());
-//               },
-//               child: 'Log out'
-//                   .text
-//                   .semiBold
-//                   .size(16)
-//                   .white
-//                   .make())
-//         ],
-//       ),
-//       20.heightBox,
-//     ],
-//       ),
-//     );
-//   }
-// })));
