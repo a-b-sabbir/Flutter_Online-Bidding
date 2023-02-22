@@ -14,7 +14,7 @@ class MyItemScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var controller = Get.put(ProductController());
+    var controller = Get.find<ProductController>();
     return Scaffold(
         appBar: AppBar(
           title: 'My Items'.text.make(),

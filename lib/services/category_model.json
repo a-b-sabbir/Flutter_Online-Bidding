@@ -1,28 +1,28 @@
 {
     "categories": [
       {
-        "name": "Women dress",
-        "subcategories": ["Wedding & Event", "Tops", "Watches"]
+        "name": "Artwork",
+        "subcategories": ["Drawing", "Painting", "Photography"]
       },
       {
-          "name": "Men Clothing & Fashion",
-          "subcategories": ["Wedding", "Glasses", "Coat"]
+          "name": "Antiques and Collectibles",
+          "subcategories": ["Ceramics", "Coins", "Books"]
       },
       {
           "name": "Computer & Accessories",
-          "subcategories": ["Laptop", "Mobile", "Desktop"]
+          "subcategories": ["Laptop", "Desktop", "Tablets"]
       },
       {
           "name": "Automobiles",
-          "subcategories": ["Cars", "Bikes"]
+          "subcategories": ["Cars", "Bikes", "Boats"]
       },
       {
-          "name": "Kids & Toys",
-          "subcategories": ["Shoes & Bags", "Baby clothing", "Girls' Toys"]
+          "name": "Electronics",
+          "subcategories": ["Cameras", "Drones", "Others"]
       },
       {
           "name": "Sporting",
-          "subcategories": ["Cycling", "Swimming", "Sneakers"]
+          "subcategories": ["Cycling", "Hiking", "Soccer"]
       },
       {
           "name": "Jwellery",
@@ -34,7 +34,7 @@
       },
       {
           "name": "Furniture",
-          "subcategories": ["Sofa", "Bed", "Home Textile"]
+          "subcategories": ["English", "American", "Chinese"]
       }
     ]
   }

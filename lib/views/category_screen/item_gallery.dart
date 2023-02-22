@@ -32,6 +32,7 @@ class ItemGallery extends StatelessWidget {
         margin: const EdgeInsets.fromLTRB(5, 20, 5, 20),
         child: GridView.builder(
             shrinkWrap: true,
+            physics: BouncingScrollPhysics(),
             itemCount: 9,
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 3,

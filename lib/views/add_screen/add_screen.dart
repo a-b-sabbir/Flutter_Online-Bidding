@@ -13,7 +13,7 @@ class AddScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var controller = Get.put(ProductController());
+    var controller = Get.find<ProductController>();
     return Obx(
       () => Scaffold(
         backgroundColor: purpleColor,
@@ -29,12 +29,11 @@ class AddScreen extends StatelessWidget {
           title: boldText(text: "Add Product", size: 16.0),
           actions: [
             controller.isLoading.value
-                ? loadingIndicator()
+                ? Transform.scale(scale: 0.5, child: loadingIndicator())
                 : TextButton(
                     onPressed: () async {
                       controller.isLoading(true);
-                      controller.uploadImages();
-                      await controller.uploadProducts(context);
+                      await controller.uploadProductsWithImages(context);
                       Get.back();
                     },
                     child: boldText(text: 'Save', size: 18.0))

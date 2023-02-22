@@ -84,10 +84,8 @@ class ProductController extends GetxController {
     }
   }
 
-  List<String> pImagesLinks = [];
-
-  uploadImages() async {
-    pImagesLinks.clear();
+  uploadProductsWithImages(BuildContext context) async {
+    List<String> pImagesLinks = [];
     for (var item in pImagesList) {
       if (item != null) {
         var fileName = basename(item.path);
@@ -96,12 +94,9 @@ class ProductController extends GetxController {
         await reference.putFile(item);
         var n = await reference.getDownloadURL();
         pImagesLinks.add(n);
-        print(pImagesLinks);
       }
     }
-  }
 
-  uploadProducts(context) async {
     var store = firestore.collection(productsCollection).doc();
     String productId =
         FirebaseFirestore.instance.collection('products').doc().id;
@@ -131,7 +126,9 @@ class ProductController extends GetxController {
   doBid(context, p_id, p_price) async {
     var store = firestore.collection(bidsCollection).doc();
     try {
-      if (p_price < bidsController.text) {
+      var minPrice = int.parse(p_price);
+      var biddingPrice = int.parse(bidsController.text);
+      if (minPrice < biddingPrice) {
         await store.set({
           'p_id': p_id,
           'bidder_name': FirebaseAuth.instance.currentUser!.displayName!,

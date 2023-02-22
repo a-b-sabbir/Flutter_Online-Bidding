@@ -71,7 +71,12 @@ class ItemDetails extends StatelessWidget {
                     isPass: false,
                     inputType: TextInputType.number,
                     controller: controller.bidsController),
-                10.heightBox,
+
+                '(Bid price should be above Minimun Price)'
+                    .text
+                    .color(fontGrey)
+                    .make(),
+                15.heightBox,
                 LongButton(
                         our_title: 'B I D',
                         our_onPress: () async {

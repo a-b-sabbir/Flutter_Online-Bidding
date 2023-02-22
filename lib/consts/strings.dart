@@ -28,11 +28,6 @@ const home = "Home",
 //home_screen strings
 
 const searchAnything = 'Search Anything...',
-    todaydeal = "Today's Deal",
-    flashSale = 'Flash Sale',
-    topSellers = 'Top Sellers',
-    topCategories = 'Top Categories',
-    featuredCategories = 'Featured Categories',
     brand = 'Brand',
     womenDress = 'Women dress',
     girslwatches = "Girls' watches",
@@ -44,11 +39,11 @@ const searchAnything = 'Search Anything...',
 
 // Category Screen
 
-const womenClothing = "Women dress",
-    menClothingFashion = "Men Clothing & Fashion",
+const artwork = "Artwork",
+    antiques = "Antiques and Collectibles",
     compAccess = "Computer & Accessories",
     automobiles = "Automobiles",
-    kidtoys = "Kids & Toys",
+    electronics = "Electronics",
     sports = "Sporting",
     jwellery = "Jwellery",
     cellphone = "Cellphone & Tab",
