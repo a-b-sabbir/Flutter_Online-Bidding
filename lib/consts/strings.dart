@@ -12,12 +12,8 @@ const ForgetPass = "Forget Password";
 const Login = "Log in";
 const SignUp = "Sign Up";
 const CreateNewAccount = "or, Create A New Account";
-const LoginWith = "Log in with";
 const loggedIn = 'Logged in Successfully';
 const loggedOut = 'Logged out Successfully';
-const PrivacyPolicy = "Privacy Policy";
-const TermANDCond = "Terms and Conditions";
-const AlreadyHaveAccount = "Already have an account?";
 
 const home = "Home",
     gallery = "Gallery",

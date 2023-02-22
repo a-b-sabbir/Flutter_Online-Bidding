@@ -23,8 +23,9 @@ class MyItemScreen extends StatelessWidget {
           stream: controller.getProducts(currentUser!.uid),
           builder:
               (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
-            if (!snapshot.hasData) {
-              return loadingIndicator();
+            if (!snapshot.hasData || snapshot.data!.docs.isEmpty) {
+              return Center(
+                  child: 'You have no items yet'.text.size(25.0).make());
             } else {
               var data = snapshot.data!.docs;
               return Padding(
@@ -43,12 +44,19 @@ class MyItemScreen extends StatelessWidget {
                                         title: data[index]['p_name'],
                                         data: data[index]));
                                   },
-                                  leading: Image.network(
-                                    '${data[index]['p_imgs'][0]}',
-                                    height: 100,
-                                    width: 100,
-                                    fit: BoxFit.cover,
-                                  ),
+                                  leading:
+                                      data[index]['p_imgs']?.isNotEmpty == true
+                                          ? Image.network(
+                                              '${data[index]['p_imgs'][0]}',
+                                              height: 100,
+                                              width: 100,
+                                              fit: BoxFit.cover,
+                                            )
+                                          : Container(
+                                              height: 100,
+                                              width: 100,
+                                              color: Colors.grey,
+                                            ),
                                   title: boldText(
                                       text: '${data[index]['p_name']}',
                                       color: fontGrey),

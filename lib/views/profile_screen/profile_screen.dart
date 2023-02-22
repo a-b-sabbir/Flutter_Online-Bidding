@@ -37,7 +37,7 @@ class ProfileScreen extends StatelessWidget {
                   normalText(
                       text: FirebaseAuth.instance.currentUser!.email!,
                       color: whiteColor,
-                      size: 17.0)
+                      size: 15.0)
                 ],
               )
             ],
